@@ -1,0 +1,10 @@
+streamlit
+sqlalchemy
+bcrypt
+pandas
+plotly
+pillow
+geopy
+streamlit-option-menu
+extra-streamlit-components
+streamlit-lottie
