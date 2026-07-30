@@ -1,10 +1,10 @@
 streamlit
-sqlalchemy
-bcrypt
+SQLAlchemy
 pandas
+numpy
+pyswisseph
 plotly
-pillow
-geopy
 streamlit-option-menu
-extra-streamlit-components
-streamlit-lottie
+streamlit-extras
+python-dotenv
+bcrypt
