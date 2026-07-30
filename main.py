@@ -1,78 +1,112 @@
 import streamlit as st
 
-# -----------------------------
-# Page Configuration
-# -----------------------------
 st.set_page_config(
     page_title="AstroMind AI",
     page_icon="🔮",
     layout="wide"
 )
 
-# -----------------------------
-# Sidebar
-# -----------------------------
-st.sidebar.title("🔮 AstroMind AI")
-st.sidebar.write("AI-Powered Astrology Platform")
+with open("assets/style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-menu = st.sidebar.selectbox(
-    "Select a Feature",
-    [
-        "Home",
-        "Birth Chart",
-        "Daily Horoscope",
-        "AI Chat"
-    ]
-)
+st.markdown("""
 
-# -----------------------------
-# Home Page
-# -----------------------------
-if menu == "Home":
-    st.title("🔮 AstroMind AI")
-    st.write("Welcome to your AI-powered astrology software!")
+<div align="center">
 
-# -----------------------------
-# Birth Chart Page
-# -----------------------------
-elif menu == "Birth Chart":
+<div class="hero-title">
+🔮 AstroMind AI
+</div>
 
-    st.title("🪐 Birth Chart Generator")
+<div class="hero-subtitle">
+AI Powered Vedic Astrology Platform
+</div>
 
-    st.write("Please enter your birth details below.")
+<div class="hero-text">
+Discover your destiny through Artificial Intelligence,
+Vedic Astrology, KP Astrology, Numerology and
+Personalized Future Prediction.
+</div>
 
-    name = st.text_input("👤 Full Name")
+</div>
 
-    birth_date = st.date_input("📅 Birth Date")
+""", unsafe_allow_html=True)
 
-    birth_time = st.time_input("🕒 Birth Time")
+st.write("")
+st.write("")
 
-    birth_place = st.text_input("📍 Birth Place")
+col1,col2,col3=st.columns([1,1,1])
 
-    if st.button("Generate Birth Chart"):
-        st.success("Birth details submitted successfully!")
+with col2:
+    if st.button("🚀 Get Started",use_container_width=True):
+        st.success("Coming Soon")
 
-        st.subheader("Entered Information")
+st.write("")
+st.write("")
 
-        st.write(f"**Name:** {name}")
-        st.write(f"**Birth Date:** {birth_date}")
-        st.write(f"**Birth Time:** {birth_time}")
-        st.write(f"**Birth Place:** {birth_place}")
+c1,c2,c3=st.columns(3)
 
-# -----------------------------
-# Daily Horoscope Page
-# -----------------------------
-elif menu == "Daily Horoscope":
+with c1:
 
-    st.title("🌞 Daily Horoscope")
+    st.markdown("""
 
-    st.info("This feature will be added soon.")
+<div class="feature-card">
 
-# -----------------------------
-# AI Chat Page
-# -----------------------------
-elif menu == "AI Chat":
+<div class="feature-icon">
+🪐
+</div>
 
-    st.title("🤖 AI Astrology Assistant")
+<div class="feature-title">
+Birth Chart
+</div>
 
-    st.info("AI chat feature coming soon.")
+<div class="feature-text">
+Generate professional Vedic birth charts instantly using AI.
+</div>
+
+</div>
+
+""",unsafe_allow_html=True)
+
+with c2:
+
+    st.markdown("""
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🤖
+</div>
+
+<div class="feature-title">
+AI Astrologer
+</div>
+
+<div class="feature-text">
+Chat with your personal AI astrologer anytime.
+</div>
+
+</div>
+
+""",unsafe_allow_html=True)
+
+with c3:
+
+    st.markdown("""
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🌙
+</div>
+
+<div class="feature-title">
+Daily Horoscope
+</div>
+
+<div class="feature-text">
+Receive personalized horoscope and lucky guidance every day.
+</div>
+
+</div>
+
+""",unsafe_allow_html=True)

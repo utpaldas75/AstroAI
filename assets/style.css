@@ -1,0 +1,85 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"]{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Remove Streamlit spacing */
+.block-container{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-left:4rem;
+    padding-right:4rem;
+}
+
+/* Hide menu */
+#MainMenu{
+    visibility:hidden;
+}
+footer{
+    visibility:hidden;
+}
+header{
+    visibility:hidden;
+}
+
+/* Background */
+.stApp{
+    background:linear-gradient(135deg,#0F172A,#111827,#1E293B);
+}
+
+/* Hero */
+.hero-title{
+    font-size:54px;
+    font-weight:700;
+    color:white;
+    margin-bottom:5px;
+}
+
+.hero-subtitle{
+    font-size:24px;
+    color:#F59E0B;
+    margin-bottom:15px;
+}
+
+.hero-text{
+    color:#CBD5E1;
+    font-size:18px;
+    max-width:760px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* Cards */
+
+.feature-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:22px;
+    text-align:center;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-6px);
+    border:1px solid #F59E0B;
+}
+
+.feature-icon{
+    font-size:42px;
+}
+
+.feature-title{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.feature-text{
+    color:#CBD5E1;
+    font-size:15px;
+}
